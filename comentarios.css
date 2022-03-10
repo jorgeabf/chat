@@ -1,0 +1,124 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+}
+
+:root {
+  --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  --primary: hsl(260, 50%, 50%);
+  --h-primary: 220;
+  --s-primary: 50%;
+  --border-radius: 4px;
+}
+
+#app {
+  min-height: 100vh;
+  padding-block: 2em;
+  font-family: var(--font-family);
+  background-color: hsl(var(--h-primary), var(--s-primary), 97.5%);
+}
+
+.app__title {
+  margin-top: 0;
+  text-align: center;
+}
+
+#container-comentarios {
+  width: min(100%, 600px);
+  margin-inline: auto;
+  padding: 1em;
+  border-radius: var(--border-radius);
+  background-color: hsl(var(--h-primary), var(--s-primary), 88%);
+  color: hsl(var(--h-primary), var(--s-primary), 20%);
+  display: grid;
+  gap: 1em;
+}
+
+#container-comentarios * {
+  font-family: var(--font-family);
+}
+
+.comentarios__input {
+  padding: 0.5em 1em;
+  outline: none;
+  border: none;
+  border-radius: var(--border-radius);
+  font-size: 1em;
+  box-shadow: 0 0 0 2px hsl(var(--h-primary), var(--s-primary), 85%);
+}
+
+.comentarios__input:focus {
+  outline: 2px solid hsl(var(--h-primary), var(--s-primary), 80%);
+}
+
+.comentario-container {
+  padding: 0.5em 1em;
+  background-color: hsl(var(--h-primary), var(--s-primary), 92%);
+  border: 1px solid hsl(var(--h-primary), var(--s-primary), 80%);
+  border-radius: var(--border-radius);
+  display: grid;
+  gap: 0.5em;
+}
+
+.respuesta-container {
+  margin-top: 0.5em;
+  padding-left: 1em;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.respuesta-container .comentario-container {
+  background-color: hsl(var(--h-primary), var(--s-primary), 94%);
+}
+
+.respuesta-container .comentario-container .comentario-container {
+  background-color: hsl(var(--h-primary), var(--s-primary), 96%);
+}
+
+.respuesta-container
+  .comentario-container
+  .comentario-container
+  .comentario-container {
+  background-color: hsl(var(--h-primary), var(--s-primary), 98%);
+}
+
+.respuesta-container
+  .comentario-container
+  .comentario-container
+  .comentario-container
+  .comentario-container {
+  background-color: hsl(var(--h-primary), var(--s-primary), 100%);
+}
+
+.boton {
+  padding: 0.5em 1em;
+  border: none;
+  border-radius: var(--border-radius);
+  text-transform: uppercase;
+  font-size: 0.8em;
+  font-weight: 600;
+  background-color: hsl(var(--h-primary), var(--s-primary), 30%);
+  color: hsl(var(--h-primary), var(--s-primary), 97.5%);
+  cursor: pointer;
+  transition: opacity 0.2s ease, color 0.2s;
+}
+
+.boton--responder {
+  margin-right: 1em;
+  background-color: hsl(var(--h-primary), var(--s-primary), 20%);
+}
+
+.boton:hover {
+  opacity: 0.85;
+  color: white;
+}
